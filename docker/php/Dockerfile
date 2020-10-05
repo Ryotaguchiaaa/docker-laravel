@@ -16,5 +16,7 @@ ENV PATH $PATH:/composer/vendor/bin
 
 
 WORKDIR /var/www
+#/var/wwwにnginx(webserver)でアクセスできるようにする
+RUN chown -R www-data:www-data /var/www
 
 RUN composer global require "laravel/installer"
