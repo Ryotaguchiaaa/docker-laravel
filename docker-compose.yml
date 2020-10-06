@@ -4,8 +4,10 @@ services:
   php:
     container_name: php
     build: ./docker/php
+    user:www-data:www-data
     volumes:
       - ./webapp:/var/www
+   
 
   nginx:
     image: nginx
